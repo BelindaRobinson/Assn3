@@ -18,7 +18,7 @@
     <body>        
         <div id="mapid"></div>   
         <script type="text/javascript">
-        var mymap = L.map('mapid').setView([48.8566, 2.3522], 13);
+        var mymap = L.map('mapid').setView([-43.37449, 172.46627], 13);
         L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
             attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
             maxZoom: 18,
@@ -27,16 +27,14 @@
         }).addTo(mymap);
         </script>
 
+        <script type="text/javascript" src="fetchgeo.js"></script>
+
         <div id="place">
             City :
             <input id="location" type="text"></input>
             <button onclick="getGeo()">Search</button>
+
+            <script type="text/javascript" src="fetchgeo.js"></script>
         </div>    
     </body>
 </html>
-
-geocoding key
-Consumer Key	Y4Eyw8OunK8ompYr9UmOJAnBNYJjNj5f
-Consumer Secret	0rGZqjY6XyCmG9UF
-Key Issued	Thu, 05/09/2019 - 20:30
-Key Expires	Never
