@@ -13,6 +13,8 @@
 
         <script type="text/javascript" src="fetchgeo.js"></script>
 
+        <script type="text/javascript" src="fetchSun.js"></script>
+
     </head>
 	
     <body>        
@@ -26,15 +28,19 @@
             accessToken: 'pk.eyJ1IjoiYmlubnliZWV6IiwiYSI6ImNqdjdsZ3ZtNzBoN2czeXBhNGxnb2gyeDcifQ.X80j66E1rkkFpnrW5bDJQw'
         }).addTo(mymap);
         </script>
-
+        
         <script type="text/javascript" src="fetchgeo.js"></script>
+        <script type="text/javascript" src="fetchSun.js"></script>
 
-        <div id="place">
+        <div id="address">
             City :
             <input id="location" type="text"></input>
-            <button onclick="getGeo()">Search</button>
-
+            <button onclick="getGeo()+getSunInfo()">Search</button>            
             <script type="text/javascript" src="fetchgeo.js"></script>
-        </div>    
+            <script type="text/javascript" src="fetchSun.js"></script>
+        </div>   
+        
+        
+
     </body>
 </html>
