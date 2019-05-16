@@ -20,7 +20,7 @@
     <body>        
         <div id="mapid"></div>   
         <script type="text/javascript">
-        var mymap = L.map('mapid').setView([-43.37449, 172.46627], 13);
+        var mymap = L.map('mapid').setView([-41.288764, 174.777224], 13);
         L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
             attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
             maxZoom: 18,
@@ -29,18 +29,21 @@
         }).addTo(mymap);
         </script>
         
-        <script type="text/javascript" src="fetchgeo.js"></script>
-        <script type="text/javascript" src="fetchSun.js"></script>
-
         <div id="address">
-            City :
-            <input id="location" type="text"></input>
-            <button onclick="getGeo()+getSunInfo()">Search</button>            
+            Which city would youn like to visit? 
+            <input id="location" type="text"></input>        
+            <button onclick="getGeo()+getSunInfo()">Submit</button>        
             <script type="text/javascript" src="fetchgeo.js"></script>
             <script type="text/javascript" src="fetchSun.js"></script>
-        </div>   
+        </div> 
         
-        
-
+	<div id="info">
+            <script type="text/javascript" src="fetchSun.js"></script>
+        </div>
+	
+	<div id="search">
+	    Recent Searches:
+	    <script type="text/javascript" src="ajaxWeather.js"></script>
+	</div>	
     </body>
 </html>

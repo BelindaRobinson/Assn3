@@ -5,7 +5,7 @@ function initialiseGeocoder() {
 }
 
 getGeo = function(){
-    var locationsearch = document.getElementById("location").nodeValue;
+    var locationsearch = document.getElementById("location").value;
     
     var geocode_request = {
 		address : location		
@@ -44,7 +44,7 @@ getGeo = function(){
         
     	//alert(result.results[0].locations[0].latLng.lat);
     	mymap.panTo(new L.LatLng(result.results[0].locations[0].latLng.lat, result.results[0].locations[0].latLng.lng));
-
+	
 }
 
 	
