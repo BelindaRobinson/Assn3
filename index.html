@@ -32,18 +32,17 @@
         <div id="address">
             Which city would youn like to visit? 
             <input id="location" type="text"></input>        
-            <button onclick="getGeo()+getSunInfo()">Submit</button>        
+            <button onclick="getGeo()+getSunInfo()+getWeatherInfo()">Submit</button>        
             <script type="text/javascript" src="fetchgeo.js"></script>
             <script type="text/javascript" src="fetchSun.js"></script>
-        </div> 
-        
-	<div id="info">
-            <script type="text/javascript" src="fetchSun.js"></script>
+            <script type="text/javascript" src="ajaxWeather.js"></script>
         </div>
+        
+        <div id="sunset"></div>
 	
-	<div id="search">
-	    Recent Searches:
-	    <script type="text/javascript" src="ajaxWeather.js"></script>
-	</div>	
+	    <div id="search">
+	        Recent Searches:
+	    
+	    </div>	
     </body>
 </html>
