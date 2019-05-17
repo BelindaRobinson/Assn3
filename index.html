@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!--links and scripts below are linking the .js pages and leaflet page to the html-->
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
         integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
         crossorigin=""/>  
@@ -16,8 +17,10 @@
         <script type="text/javascript" src="fetchSun.js"></script>
 
     </head>
-	
-    <body>        
+    
+    
+    <body>   
+        <!--below is the div for the leaflet map to display and sorting the starting location and api key-->     
         <div id="mapid"></div>   
         <script type="text/javascript">
         var mymap = L.map('mapid').setView([-41.288764, 174.777224], 13);
@@ -29,8 +32,9 @@
         }).addTo(mymap);
         </script>
         
+        <!--below is where the user enters the a location and function to get information is started. this is also display text bosx and buttons-->
         <div id="address">
-            Which city would youn like to visit? 
+            Which city would you like to visit? 
             <input id="location" type="text"></input>        
             <button onclick="getGeo()+getSunInfo()+getWeatherInfo()">Submit</button>        
             <script type="text/javascript" src="fetchgeo.js"></script>
@@ -38,7 +42,10 @@
             <script type="text/javascript" src="ajaxWeather.js"></script>
         </div>
         
+        <!--below is where the sunset and sunrise information is displayed aswell as info and search informaiton-->
         <div id="sunset"></div>
+
+        <div id="info"></div>
 	
 	    <div id="search">
 	        Recent Searches:
